@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Event Registration Page</title>
+
+        <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            background-color: #aeb9df;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(32, 25, 25, 0.316);
+        }
+
+        h1 {
+            text-align:center;
+            margin: 0 0 18px 0;
+            color: #000000;
+        }
+
+        h2{
+            margin:26px 0 10px 0;
+            color: #190e0e;
+        }
+        
+        .note {
+            margin: 8px 0 0 0;
+            font-size: 13px;
+            color: #78469ec6;
+            text-align: center;
+
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border:1px solid #100e0e;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        th{
+            background-color: #120f0f;
+            color: white;
+            font-weight: 700;
+        }
+        tbody tr:nth-child(even){
+            background-color: #8a69a35c;
+        }
+        form {
+            margin-top: 12px;
+        }
+        .row2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        @media (min-width: 800px) {
+        .row2 {
+            grid-template-columns: 1fr;
+        }
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        input, select {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 9px 10px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-size: 14px;
+            outline: none;
+        }
+        input:focus, select:focus {
+            border-color: #0b6aa2;
+            box-shadow: 0 0 0 3px rgba(11, 106, 162, 0.15);
+        }
+        .groupBox {
+            margin-top: 0px;
+            padding: 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            background-color: #8a69a35c;
+            
+        }
+        .groupTitle {
+            font-weight: 800;
+            margin-bottom: 10px;
+            font-size: 13px;
+            
+        }
+        .inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            align-items: center;
+        }
+        .inline label {
+            margin: 0;
+            font-weight: 600;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .inline input[type="radio"],
+        .inline input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+        .buttons {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        input[type="submit"], input[type="reset"] {
+            border: none;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-weight: 800;
+            cursor: pointer;
+            font-size: 14px;
+            width: auto;
+        }
+        input[type="submit"] {
+            background-color: #4a2697b7;
+            color: white;
+            }
+        input[type="submit"]:hover {
+            background-color: #084d78;
+        }
+        input[type="reset"] {
+            background-color: #6b7280;
+            color: white;
+        }
+        input[type="reset"]:hover {
+            background-color: #4b5563;
+        }
+        .msg {
+            display: none;
+            margin-top: 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            line-height: 1.35;
+        }
+        .msg.error {
+            display: none;
+            background-color: rgba(220, 38, 38, 0.10);
+            border: 1px solid rgba(220, 38, 38, 0.25);
+            color: #7f1d1d;
+        }
+        .msg.ok {
+            display: none;
+            background-color: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            color: #065f46;
+        }   
+        .small {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 6px;
+        }
+        input::placeholder {
+            color: #9ca3b0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sports Event Registration</h1>
+        <h2>Upcoming Events</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bobsledding</td>
+                    <td>February 17, 2025</td>
+                    <td>7:00 AM</td>
+                    <td>Top of Ice Flea Peak Mountain</td>
+                </tr>
+                <tr>
+                    <td>Curling</td>
+                    <td>March 17, 2025</td>
+                    <td>6:00 PM</td>
+                    <td>Indoor Ice Rink</td>
+                </tr>
+                <tr>
+                    <td>Syncronized Swimming</td>
+                    <td>April 17, 2026</td>
+                    <td>10:00 AM</td>
+                    <td>Indoor Pool</td>
+                </tr>
+                <tr>
+                    <td>Underwater Hiking</td>
+                    <td>May 17, 2026</td>
+                    <td>9:00 AM</td>
+                    <td>Indoor Pool - deep end</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Registration Form</h2>
+
+        <form id="registrationForm">
+            <div class="row2">
+                <div>
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Full name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div>
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="create a password" required>
+                </div>
+
+                <div>
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirm password" placeholder="confirm your password" required>
+                </div>
+
+                <div>
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" placeholder="enter your age (16-80)" min="16" max="80">
+                    <div class="small">You must be at least 16 years old to register.
+                </div>
+
+                <div>
+                    <label for="country">Country *</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="eventDate">Event Date *</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+
+                <div>
+                    <label for="arrivalTime">Event Time *</label>
+                    <input type="time" id="arrivalTime" name="arrivalTime" required>
+                </div>
+            </div>
+                <div class="groupBox">
+                    <div class="groupTitle"> Ticket Type</div>
+                    <div class="inline">
+                        <label><input type="radio" name="ticketType" value="standard" required> Standard</label>
+                        <label><input type="radio" name="ticketType" value="vip"> VIP</label>
+                        <label><input type="radio" name="ticketType" value="student"> Student</label>
+                    </div>
+                </div>
+                <div class="groupBox">
+                    <div class="groupTitle">Extra Options</div>
+                    <div class="inline">
+                        <label><input type="checkbox" name="extras" value="Meal"> Meal Included</label>
+                        <label><input type="checkbox" name="extras" value="Parking"> Parking Pass</label>
+                        <label><input type="checkbox" name="extras" value="Merchandise"> Event Merchandise</label>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </div>
+                <div class="msg error" id="errorMsg"></div>
+                <div class="msg ok" id="successMsg"></div>
+        </form>
+
+            <p class="note">Validation rules: required name and email, valid email format, passwords must match, age 16 to 80.</p>
+            
+        <script>
+            const form = document.getElementById('registrationForm');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+
+            function validatePassword() {
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.setCustomValidity("Passwords do not match");
+                } else {
+                    confirmPassword.setCustomValidity("");
+                }
+            }
+
+            password.addEventListener('input', validatePassword);
+            confirmPassword.addEventListener('input', validatePassword);
+
+            form.addEventListener("submit", (e) => {
+                validatePasswords();
+                if (!form.checkValidity()) {
+                    e.preventDefault();
+                }
+                });
+        </script>
+</body>
+</html>
